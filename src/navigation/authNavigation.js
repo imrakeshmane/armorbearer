@@ -2,6 +2,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Login from '../screens/auth/login';
 import Register from '../screens/auth/register'
 import Starter from '../screens/auth/starter'
+import Slider from '../screens/auth/slider';
 
 
 const AuthStack = createStackNavigator({
@@ -17,6 +18,9 @@ const AuthStack = createStackNavigator({
     Register:
     {
         screen: Register
+    },
+    Slider:{
+        screen:Slider
     }
 
 },
