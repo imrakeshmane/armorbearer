@@ -1,7 +1,7 @@
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import AuthNavigation from './authNavigation';
 import AppStack from './AppStack';
-
+import Home from '../screens/home/home'
 const SwitchNavigator = createSwitchNavigator(
   {
 
@@ -10,6 +10,7 @@ const SwitchNavigator = createSwitchNavigator(
     Auth: AuthNavigation,
     AppNav: AppStack,
     // Hotel: Hotel
+    Home:Home
   },
   {
     initialRouteName: 'Auth'

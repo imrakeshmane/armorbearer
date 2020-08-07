@@ -7,7 +7,7 @@ import {
     ImageBackground, ToastAndroid, SafeAreaView
 } from 'react-native';
 
-const Login = () => {
+const Login = ({navigation}) => {
     return (
         <>
         <SafeAreaView style={[styles.container]}>
@@ -40,7 +40,7 @@ const Login = () => {
 
                         </View>
                    
-                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Register', { transition: 'vertical' })}>
+                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Home', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Sign In'}</Text>
                     </TouchableOpacity>
                 </View>

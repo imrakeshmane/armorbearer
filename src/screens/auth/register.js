@@ -9,7 +9,7 @@ import {
     ImageBackground, ToastAndroid, SafeAreaView
 } from 'react-native';
 
-const Register = () => {
+const Register = ({navigation}) => {
     return (
         <>
         <SafeAreaView style={[styles.container]}>
@@ -51,7 +51,7 @@ const Register = () => {
                             <Text style={{flex:1,textAlign:'center'}}>Please sigin me up for monthly news letters.</Text>
                         </View>
                    
-                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Register', { transition: 'vertical' })}>
+                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Home', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Sign up'}</Text>
                     </TouchableOpacity>
                 </View>
