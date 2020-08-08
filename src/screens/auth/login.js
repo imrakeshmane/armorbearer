@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
     Text,
     View,StyleSheet,TextInput,
-    Image,
+    Image,CheckBox,
     TouchableOpacity,
     ImageBackground, ToastAndroid, SafeAreaView
 } from 'react-native';
@@ -34,13 +34,24 @@ const Login = ({navigation}) => {
                     value={''}
                     />
                         <View style={{flexDirection:'row',alignContent:'center',marginVertical:10}}>
-                            <Text style={{flex:1,textAlign:'center'}}>Stay login in</Text>
-                            <Text style={{flex:1,textAlign:'center'}}>Forgot Password</Text>
+                            <View style={{flexDirection:'row'}}>
+                            <CheckBox
+                                value={false}
+                                onValueChange={()=>{
+
+                                }}
+                                style={{marginLeft:50,borderRadius:10}}
+
+                                />
+                             <Text style={{textAlign:'center',marginTop:5}}>  Stay login in</Text>
+
+                            </View>
+                            <Text style={{flex:1,textAlign:'center',marginTop:5}}>Forgot Password</Text>
 
 
                         </View>
                    
-                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Home', { transition: 'vertical' })}>
+                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Informmative', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Sign In'}</Text>
                     </TouchableOpacity>
                 </View>

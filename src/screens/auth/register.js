@@ -5,7 +5,7 @@ import {
     Text,
     View,StyleSheet,TextInput,
     Image,
-    TouchableOpacity,
+    TouchableOpacity,CheckBox,
     ImageBackground, ToastAndroid, SafeAreaView
 } from 'react-native';
 
@@ -48,10 +48,18 @@ const Register = ({navigation}) => {
                     value={''}
                     />
                         <View style={{flexDirection:'row',alignContent:'center',marginVertical:10}}>
-                            <Text style={{flex:1,textAlign:'center'}}>Please sigin me up for monthly news letters.</Text>
+                        <CheckBox
+                                value={false}
+                                onValueChange={()=>{
+
+                                }}
+                                style={{marginLeft:10,borderRadius:10}}
+
+                                />
+                            <Text style={{textAlign:'center',marginTop:5}}>Please sigin me up for monthly news letters.</Text>
                         </View>
                    
-                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Home', { transition: 'vertical' })}>
+                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Informmative', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Sign up'}</Text>
                     </TouchableOpacity>
                 </View>
