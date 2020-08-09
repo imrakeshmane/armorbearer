@@ -55,7 +55,7 @@ const Slider = ({navigation }) => {
 
               </View>
                 <View style={styles.imageview}>
-                     <Image source={require('../../assets/slider_one_hands.png')} style={styles.imageStyle} />
+                     <Image source={require('../../assets/slider_one_hands.png')} style={{ alignSelf:'center',height:height/2,aspectRatio: 0.9,resizeMode:'contain'}} />
                 </View>   
             </View>
             <View style={{ width, height }}>
@@ -66,7 +66,7 @@ const Slider = ({navigation }) => {
 
               </View>
               <View style={styles.imageview}>
-                     <Image source={require('../../assets/slider_two_image.png')} style={styles.imageStyle} />
+                     <Image source={require('../../assets/slider_two_image.png')} style={{ alignSelf:'center',aspectRatio: 2,resizeMode:'contain'}} />
                 </View> 
             </View>
             <View style={{ width, height }}>
@@ -81,7 +81,7 @@ const Slider = ({navigation }) => {
 
               </View>
               <View style={styles.imageview}>
-                     <Image source={require('../../assets/slider_four_image.png')} style={styles.imageStyle} />
+                     <Image source={require('../../assets/slider_four_image.png')} style={{height:height/3,width:width,resizeMode:'center'}} />
                 </View> 
             </View>
             <View style={{ width, height }}>
@@ -91,6 +91,7 @@ const Slider = ({navigation }) => {
               /> */}
               <View style={styles.wrapperStartr}>
               <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                
                   <Text style={{fontWeight:'bold',fontSize:30,color:'#5abd8c'}}>Lession for </Text>
             </View>
                 <View style={{   alignItems: 'center',flex:1 }} >
@@ -103,6 +104,9 @@ const Slider = ({navigation }) => {
                     <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Register', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Sign up'}</Text>
                     </TouchableOpacity>
+                    <View style={styles.imageview}>
+                     <Image source={require('../../assets/slider_sign_in_image.png')} style={{height:height/3,width:width,resizeMode:'cover'}} />
+                </View> 
                 </View>
               </View>
             </View>

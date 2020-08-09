@@ -5,7 +5,7 @@ const Inventry = () => {
     return (
         <View>
             <Text>
-                {"Welcome to Inventry"}
+                {"Page under construction"}
 
             </Text>
         </View>

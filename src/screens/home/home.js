@@ -7,7 +7,7 @@ import {
     ImageBackground, ToastAndroid, SafeAreaView
 } from 'react-native';
 
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 const Home = ({navigation}) => {
     let ourTopiPic=[
         {
@@ -39,17 +39,23 @@ const Home = ({navigation}) => {
             pic:require('../../assets/2.png')
         }
     ]
+    
     const sliderView = (title) =>{
         return(
-            <View style={{margin:20,}}>
-            <Text style={styles.header}>{title} </Text>
-            <ScrollView
-                horizontal={true}
-                >
-              
+            <View style={{margin:20,marginTop:title==='Our Topic Pics'? 40:0}}>
+                <View style={{flexDirection:'row'}}>
+                <Text style={[styles.header,{flex:6,color:title==='Our Topic Pics'? 'white':'black'}]}>{title} </Text>
+              {title==='Our Topic Pics' &&  <Icon name="navicon" size={30} color="white" style={{flex:1,}} />}
+
+                
+                </View>
+                <ScrollView
+                    horizontal={true}
+                    >
+                
                 <View style={styles.mainTopilistView}>
                      <View style={styles.topicView}>
-                        <Image source={require('../../assets/2.png')} style={styles.imageStyle} />
+                        <Image source={require('../../assets/Biography.png')} style={styles.imageStyle} />
                         <Text style={{fontSize:16,fontWeight:'bold'}}>Prayer  </Text>
                         <Text style={{fontSize:12,marginVertical:5}}>Mathues F  </Text>
                     </View>    
@@ -70,7 +76,7 @@ const Home = ({navigation}) => {
                 </View>
                 <View style={styles.mainTopilistView}>
                      <View style={styles.topicView}>
-                        <Image source={require('../../assets/2.png')} style={styles.imageStyle} />
+                        <Image source={require('../../assets/GraphicNovels.png')} style={styles.imageStyle} />
                         <Text style={{fontSize:16,fontWeight:'bold'}}>Prayer  </Text>
                         <Text style={{fontSize:12,marginVertical:5}}>Mathues F  </Text>
                     </View>    
@@ -98,8 +104,13 @@ const Home = ({navigation}) => {
     return (
        <>
         <SafeAreaView style={[styles.container]}>
+        <ImageBackground source={require('../../assets/homeback.png')} style={styles.backgroundImage} >
+      
+
             <Text />
             <Text />
+        {/* <ImageBackground source={require('../../assets/homeback.png')} >
+        </ImageBackground> */}
                 <View style={{   alignItems: 'center',flex:1 }} >
                     <ScrollView>
                     {sliderView('Our Topic Pics')}
@@ -131,13 +142,14 @@ const Home = ({navigation}) => {
                     <Text />
 
                 </View>
-                <View style={{flexDirection:'row',backgroundColor:'#5abd8c',justifyContent:'center',alignItems:'center',alignContent:'center'}}>
+                {/* <View style={{flexDirection:'row',backgroundColor:'#5abd8c',justifyContent:'center',alignItems:'center',alignContent:'center'}}>
                     <Text style={{flex:1,padding:15,textAlign:'center',color:'white'}}>Search</Text>
                    
 
-                </View>
+                </View> */}
                     </ScrollView>
                 </View>
+                </ImageBackground>
         </SafeAreaView >
        </>
     )
@@ -151,6 +163,9 @@ const styles = StyleSheet.create({
        
        
     },
+    backgroundImage: {
+        flex: 1,
+    },    
     mainTopilistView:{
         marginTop:10
     },

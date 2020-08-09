@@ -1,13 +1,14 @@
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import Home from '../../screens/home/home';
 import CustomDrawer from '../../components/customeDrower';
-
+import appHomeNavigation from '../homeNavigation'
 const Drawer = createDrawerNavigator(
     {
-        Home:Home
+        Home:Home,
+        appHomeNavigation:appHomeNavigation
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'appHomeNavigation',
         contentComponent: CustomDrawer,
         drawerWidth: 300,
     }

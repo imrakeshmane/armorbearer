@@ -5,7 +5,7 @@ const Bils = () => {
     return (
         <View>
             <Text>
-                {"Welcome to Bils"}
+            {"Page under construction"}
 
             </Text>
         </View>

@@ -1,9 +1,8 @@
 import { createNavigator } from 'react-navigation';
 
 import PostPostLoginAppContainer from './PostLoginAppContainer';
-import BarNavigation from './barNavigation';
-import HotelNavigation from './hotelNavigation';
+import HomeNavigation from './homeNavigation';
 
-const AppStack = createNavigator(PostPostLoginAppContainer, BarNavigation.router, {});
+const AppStack = createNavigator(PostPostLoginAppContainer, HomeNavigation.router, {});
 
 export default AppStack;

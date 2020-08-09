@@ -12,7 +12,7 @@ const Stocks = () => {
                 
                 <View>
             <Text>
-                {"Welcome to Stocks"}
+            {"Page under construction"}
 
             </Text>
         </View>

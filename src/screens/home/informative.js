@@ -27,7 +27,7 @@ const Informmative = ({navigation}) => {
 
                     <Text></Text>
 
-                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Home', { transition: 'vertical' })}>
+                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Drawer', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Next'}</Text>
                     </TouchableOpacity>
                 </View>
@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
         width:'80%',
         alignItems:'center',
         backgroundColor:'#5abd8c',
-        borderRadius:50
+        borderRadius:50,
+        
     },
     buttonTextLogin:{
         fontSize:16,
