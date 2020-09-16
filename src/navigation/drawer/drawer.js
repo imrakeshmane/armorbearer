@@ -1,11 +1,12 @@
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import Home from '../../screens/home/home';
 import CustomDrawer from '../../components/customeDrower';
-import appHomeNavigation from '../homeNavigation'
+import appHomeNavigation from '../homeNavigation';
+import BarNavigation from '../barNavigation'
 const Drawer = createDrawerNavigator(
     {
         Home:Home,
-        appHomeNavigation:appHomeNavigation
+        appHomeNavigation:BarNavigation
     },
     {
         initialRouteName: 'appHomeNavigation',

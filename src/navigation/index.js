@@ -4,14 +4,14 @@ import AppStack from './AppStack';
 import Home from '../screens/home/home';
 import Informmative from '../screens/home/informative';
 import Drawer from './drawer/drawer';
-
+import barbottomStack from './barbottomStack/bartableStack'
 const SwitchNavigator = createSwitchNavigator(
   {
 
 
     //Mynew
     Auth: AuthNavigation,
-    AppNav: AppStack,
+    AppNav: barbottomStack,
     Home:Home,
     Informmative:Informmative,
     Drawer:Drawer

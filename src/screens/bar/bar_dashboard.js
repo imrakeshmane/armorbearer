@@ -45,7 +45,7 @@ const BarDashbord = () => {
         const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
 
         return (
-            <View key={{ item }} style={{ borderWidth: 1, alignContent: 'center', flex: 1, borderRadius: 20, borderColor: 'red', margin: 5 }}>
+            <View key={{ item }} style={{ borderWidth: 1, alignContent: 'center', flex: 1, borderRadius: 20, borderColor: '#5abd8c', margin: 5 }}>
                 <TouchableOpacity style={{ margin: 30 }} onPress={() => {
                     settableModel(!tableModel)
                 }}>
@@ -64,14 +64,6 @@ const BarDashbord = () => {
         <>
             <StatusBar barStyle="dark-content" />
             <SafeAreaView style={{ flex: 1 }}>
-                <TouchableOpacity
-
-                    onPress={() => {
-                        settableModel(!tableModel);
-                    }}
-                >
-                    <Text style={styles.textStyle}>Show Modal</Text>
-                </TouchableOpacity>
                 <FlatList
                     style={{ margin: 10 }}
                     data={tables}

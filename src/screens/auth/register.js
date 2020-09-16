@@ -59,7 +59,7 @@ const Register = ({navigation}) => {
                             <Text style={{textAlign:'center',marginTop:5}}>Please sigin me up for monthly news letters.</Text>
                         </View>
                    
-                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Informmative', { transition: 'vertical' })}>
+                    <TouchableOpacity style={styles.loginView} onPress={() => navigation.navigate('Drawer', { transition: 'vertical' })}>
                             <Text style={styles.buttonTextLogin}>{'Sign up'}</Text>
                     </TouchableOpacity>
                 </View>

@@ -36,54 +36,9 @@ const Slider = ({navigation }) => {
         <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView style={{ flex: 1,backgroundColor:'white' }}>
-          <ScrollView
-            style={{ flex: 1 }}
-            horizontal={true}
-            scrollEventThrottle={16}
-            pagingEnabled={true}
-            showsHorizontalScrollIndicator={false}
-            onScroll={(event) => {
-              setSliderPage(event);
-            }}
-          >
-            <View style={{ width, height }}>
-              
-              <View style={styles.wrapper}>
-                <Text style={styles.header}>Learning </Text>
-                <Text style={styles.header}>The Word Of God</Text>
-                <Text style={styles.paragraph}>Lession from the  bible designed for you</Text>
-
-              </View>
-                <View style={styles.imageview}>
-                     <Image source={require('../../assets/slider_one_hands.png')} style={{ alignSelf:'center',height:height/2,aspectRatio: 0.9,resizeMode:'contain'}} />
-                </View>   
-            </View>
-            <View style={{ width, height }}>
-            <View style={styles.wrapper}>
-                <Text style={styles.header}>Quizzes and Scriptural </Text>
-                <Text style={styles.header}> Games Out of The Box</Text>
-                <Text style={styles.paragraph}>If you're looking for a way to challege yourself or some competition get ready for one !</Text>
-
-              </View>
-              <View style={styles.imageview}>
-                     <Image source={require('../../assets/slider_two_image.png')} style={{ alignSelf:'center',aspectRatio: 2,resizeMode:'contain'}} />
-                </View> 
-            </View>
-            <View style={{ width, height }}>
-              {/* <Image
-                source={require('./src/assets/images/gray-and-black-digital-wallpaper-1573434.jpg')}
-                style={styles.imageStyle}
-              /> */}
-             <View style={styles.wrapper}>
-                <Text style={styles.header}>20 Different  </Text>
-                <Text style={styles.header}> Lessons And Counting</Text>
-                <Text style={styles.paragraph}>We've successfully prepared 20 different lessions read</Text>
-
-              </View>
-              <View style={styles.imageview}>
-                     <Image source={require('../../assets/slider_four_image.png')} style={{height:height/3,width:width,resizeMode:'center'}} />
-                </View> 
-            </View>
+         
+           
+           
             <View style={{ width, height }}>
               {/* <Image
                 source={require('./src/assets/images/pink-and-purple-wallpaper-1616403.jpg')}
@@ -110,13 +65,6 @@ const Slider = ({navigation }) => {
                 </View>
               </View>
             </View>
-           
-          </ScrollView>
-          <View style={styles.paginationWrapper}>
-            {Array.from(Array(4).keys()).map((key, index) => (
-              <View style={[styles.paginationDots, { opacity: pageIndex === index-1 ? 1 : 0.2 }]} key={index} />
-            ))}
-          </View>
         </SafeAreaView>
       </>
     )
